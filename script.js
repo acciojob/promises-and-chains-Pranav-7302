@@ -1,4 +1,3 @@
-//your JS code here. If required.
 let inputName = document.getElementById('name');
 let inputAge = document.getElementById('age');
 let button = document.querySelector('button');
@@ -13,17 +12,17 @@ button.addEventListener('click', (e) => {
         return; // Stop execution if input is invalid
     }
 
-    let promise = new Promise((resolve, reject) => {
+     new Promise((resolve, reject) => {
         if (ageValue < 18) {
+          setTimeout(() => {
             reject("Oh sorry, " + nameValue + ". You aren't old enough.");
+          }, 4000);
         } else {
-            resolve("Welcome, " + nameValue + ". You can vote.");
+            setTimeout(() => {
+                resolve("Welcome, " + nameValue + ". You can vote.");
+            }, 4000);
         }
-    });
-
-    setTimeout(() => {
-        promise
+    })
             .then((message) => alert(message))
             .catch((error) => alert(error));
-    }, 4000);
 });
