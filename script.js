@@ -15,7 +15,7 @@ button.addEventListener('click', (e) => {
      new Promise((resolve, reject) => {
         if (ageValue < 18) {
           setTimeout(() => {
-            reject("Oh sorry, " + nameValue + ". You aren't old enough.");
+            reject("Oh sorry " + nameValue + ". You aren't old enough.");
           }, 4000);
         } else {
             setTimeout(() => {
